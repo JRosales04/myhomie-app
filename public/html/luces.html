@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyHomie</title>
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon" />
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/general.css" />
+    <link rel="stylesheet" href="../style/luces.css" />
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/conexionPantalla.js" defer></script>
+    <script src="../js/hora.js" defer></script>
+    <script src="../js/fecha.js" defer></script>
+    <script src="../js/alarmaActiva.js" defer></script>
+    <script src="../js/volverHome.js" defer></script>
+    <script src="../js/navegacionLuces.js" defer></script>
+    <script type="module" src="../js/comandosVoz.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://github.com/100495802/SIU.G81-14.git" target="_blank" rel="noopener noreferrer">
+                <img src="../img/logo.png" alt="Logo de MyHomie" />
+            </a>
+        </div>
+        <div class="titulo">
+            <h1>MyHomie!</h1>
+            <span id="fecha"></span>
+        </div>
+            <div class="barra-estado">
+            <img class="bateria" src="../img/battery.png" alt="Batería casi llena" />
+            <span id="hora"></span>
+        </div>
+    </header>
+    <main>
+        <section class="menu">
+            <h1>Control de luces</h1>
+            <div class="contenido">
+                <div class="mapa-casa">
+                    <img src="../img/ldescansillo.png" alt="Mapa de la casa">
+                </div>
+                <div class="luces">
+                    <div class="luz" tabindex="0" data-imagen="../img/ldescansillo.png">
+                        <div class="texto">
+                        <h2>Descansillo</h2>
+                        <img src="../img/lightbulboff.png" alt="Descansillo" class="icono" />
+                    </div>
+                    <div class="switch">
+                        <label class="switch-label">
+                            <input type="checkbox" id="switch1">
+                            <span class="slider-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="luz" tabindex="0" data-imagen="../img/ldespacho.png">
+                    <div class="texto">
+                        <h2>Despacho</h2>
+                        <img src="../img/lightbulboff.png" alt="Despacho" class="icono" />
+                    </div>
+                    <div class="switch">
+                        <label class="switch-label">
+                            <input type="checkbox" id="switch2">
+                            <span class="slider-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="luz" tabindex="0" data-imagen="../img/lbaño.png">
+                    <div class="texto">
+                        <h2>Baño</h2>
+                        <img src="../img/lightbulboff.png" alt="Baño" class="icono">
+                    </div>
+                    <div class="switch">
+                        <label class="switch-label">
+                            <input type="checkbox" id="switch3">
+                            <span class="slider-switch"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="luz" tabindex="0" data-imagen="../img/lsalon.png">
+                    <div class="texto">
+                        <h2>Salón</h2>
+                        <img src="../img/lightbulboff.png" alt="Salón" class="icono">
+                    </div>
+                    <div class="switch">
+                        <label class="switch-label">
+                            <input type="checkbox" id="switch4" />
+                            <span class="slider-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                <div class="luz" tabindex="0" data-imagen="../img/ldormitoriogrande.png">
+                    <div class="texto">
+                        <h2>Dormitorio Grande</h2>
+                        <img src="../img/lightbulboff.png" alt="Dormitorio Grande" class="icono">
+                    </div>
+                    <div class="switch">
+                        <label class="switch-label">
+                            <input type="checkbox" id="switch5">
+                            <span class="slider-switch"></span>
+                        </label>
+                    </div>
+                </div>
+                    <div class="luz" tabindex="0" data-imagen="../img/ldormitoriopequeño.png">
+                        <div class="texto">
+                            <h2>Dormitorio Pequeño</h2>
+                            <img src="../img/lightbulboff.png" alt="Dormitorio Pequeño" class="icono">
+                        </div>
+                        <div class="switch">
+                            <label class="switch-label">
+                                <input type="checkbox" id="switch6">
+                                <span class="slider-switch"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MyHomie. Todos los derechos reservados.</p>
+        <p>Desarrollado por [Grupo 14] - SIU</p>
+    </footer>
+</body>
+</html>

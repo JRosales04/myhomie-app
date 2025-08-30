@@ -1,0 +1,28 @@
+{
+  "name": "myhomie-app",
+  "version": "1.0.0",
+  "description": "- Javier Rosales Lozano\r - Guillermo Sánchez González\r - Alonso Rios Guerra",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRosales04/myhomie-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRosales04/myhomie-app/issues"
+  },
+  "homepage": "https://github.com/JRosales04/myhomie-app#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "socket.io": "^4.8.1"
+  }
+}

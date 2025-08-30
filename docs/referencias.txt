@@ -1,0 +1,50 @@
+PROYECTO DESARROLLADO POR
+
+- Javier Rosales Lozano
+- Guillermo Sánchez González
+- Alonso Rios Guerra
+
+APIs/BIBLIOTECAS
+
+API Nominatim:
+- https://nominatim.org/
+
+API Open-Meteo:
+- https://open-meteo.com/en/docs
+- GitHub relacionado para consultar códigos meteorológicos: https://github.com/open-meteo/open-meteo/issues/789
+
+BIBLIOTECA Chart.js
+- https://www.chartjs.org/docs/latest/
+
+ESTILOS
+
+Fuentes de letra: https://fonts.google.com/
+Iconos (FontsAwesome): https://fontawesome.com/icons
+Imágenes GIF: https://www.flaticon.es/
+Edición de imágenes (Photopea): https://www.photopea.com/
+Recorte de imágenes (Pinetools): https://pinetools.com/es/recortar-imagen-lotes-serie
+
+Paleta de colores:
+#333333
+#E63946
+#E9C46A
+#A8DADC
+#33CCCC
+#2A9D8F
+#457B9D
+#8D5FAF
+#999999
+#CCCCCC
+#E4E4E4
+#F4F4F4
+
+INICIO
+
+// Creación del proyecto
+`npm init -y`
+
+// Instalación de dependencias
+`npm install express socket.io`
+
+// Depuración USB dispositivo móvil
+chrome://inspect

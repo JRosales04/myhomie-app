@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la web -->
+    <title>MyHomie</title>
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/general.css">
+    <link rel="stylesheet" href="../style/home.css">
+    <!-- Scripts -->
+    <script src="../js/movil.js" defer></script>
+    <script src="../js/movimientoLlamada.js" defer></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/reconocerVoz.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="titulo" style="margin-top: 30%;">
+            <h1>MyHomie!</h1>
+        </div>
+        <div class="barra-estado" style="margin-top: 30%;">
+            <img class="bateria" src="../img/battery.png" alt="Batería">
+        </div>
+    </header>
+    <main>
+        <div class="logo">
+            <img src="../img/logo.png" alt="Logo de MyHomie" style="width: 100px; height: auto;">
+        </div>
+        <audio id="audio" controls style="display: none;">
+            <source type="audio/wav" src="../audio/telefonillo.mp3" >
+        </audio>
+    </main>
+    <footer style="position: fixed; bottom: 0; width: 100%; text-align: center; background-color: #f1f1f1; padding: 10px;">
+        <p>&copy; 2025 MyHomie. Todos los derechos reservados.</p>
+        <p>Desarrollado por [Grupo 14] - SIU</p>
+    </footer>
+</body>
+</html>

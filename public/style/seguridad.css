@@ -1,0 +1,322 @@
+
+main {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.contenido h2 {
+    font-size: 1rem;
+}
+
+.historial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 90%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.contenedor-historias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+    max-height: 300px;
+    overflow-y: auto;
+    gap: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.contenedor-historias::-webkit-scrollbar {
+    display: none;
+}
+
+.historia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    gap: 0.5rem;
+    background: #2A9D8F;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 0.5rem;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.mensaje {
+    color: white;
+    
+}
+
+.hora-historia {
+    color: white;
+    font-weight: bold;
+}
+
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    gap: 1rem;
+}
+
+.opcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.llamada-emergencia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+.llamada-emergencia button {
+    border-radius: 10px;
+    border: none;
+    background: white;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.llamada-emergencia button:active {
+    transform: scale(0.95);
+}
+
+.llamada-emergencia img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.camaras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.bloqueo-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 90%;
+    place-items: center;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.switch-label {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Estilo para switches cuando están enfocados */
+.switch input:focus + .slider-switch {
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+.slider-switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider-switch:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider-switch {
+    background-color: #2A9D8F;
+}
+
+input:checked + .slider-switch:before {
+    transform: translateX(30px);
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    padding: 0.5rem;
+    accent-color: #CCCCCC;
+}
+
+.slider:focus {
+    accent-color: #2A9D8F;
+    outline: none;
+}
+
+.niveles {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 50%;
+}
+
+#modo-dia-noche .switch, #buzon .switch {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+}
+
+#modo-dia-noche .switch img, #buzon .switch img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.reiniciar-boton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+}
+
+.reiniciar {
+    border-radius: 10px;
+    border: none;
+    background: white;
+    width: 4rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reiniciar img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.reiniciar:active {
+    transform: scale(0.95);
+}
+
+.camaras{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+}
+
+.contenedor-camaras {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 70%;
+}
+
+.contenedor-camaras img {
+    width: 90%;
+    height: 100%;
+}
+
+.botones-camaras {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20%;
+    height: auto;
+    gap: 0.5rem;
+}
+
+.botones-camaras button {
+    border-radius: 10px;
+    border: none;
+    background: #2A9D8F;
+    color: white;
+    font-weight: bold;
+    width: 3rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

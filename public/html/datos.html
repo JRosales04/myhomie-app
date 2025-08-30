@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la web -->
+    <title>MyHomie</title>
+    <link rel="icon" href="../img/favicon.png" type="image/x-icon">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style/general.css">
+    <link rel="stylesheet" href="../style/datos.css">
+    <!-- Scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../js/conexionPantalla.js" defer></script>
+    <script src="../js/hora.js" defer></script>
+    <script src="../js/fecha.js" defer></script>
+    <script src="../js/volverHome.js" defer></script>
+    <script src="../js/datos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+    <script src="../js/grafico.js" defer></script>
+    <script type="module" src="../js/comandosVoz.js" defer></script>
+    <script src="../js/alarmaActiva.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="https://github.com/100495802/SIU.G81-14.git" target="_blank" rel="noopener noreferrer">
+                <img src="../img/logo.png" alt="Logo de MyHomie">
+            </a>
+        </div>
+        <div class="titulo">
+            <h1>MyHomie!</h1>
+            <span id="fecha"></span>
+        </div>
+        <div class="barra-estado">
+            <img class="bateria" src="../img/battery.png" alt="Batería casi llena">
+            <span id="hora"></span>
+        </div>
+    </header>
+    <main>
+        <section class="menu">
+            <h2>Datos del Hogar</h2>
+            <div class="contenido">
+                <div class="dashboard">
+                    <div class="item" id="estado">
+                        <h2>Estado</h2>
+                        <span>
+                            <img src="../img/home.png" alt="Casa">
+                        </span>
+                    </div>
+                    <div class="item" id="dispositivos">
+                        <h2>Dispositivos</h2>
+                        <span>
+                            <div>
+                                <img src="../img/lights.png" alt="Luces">
+                            </div>
+                            <div>
+                                <img src="../img/door.png" alt="Puertas">
+                            </div>
+                            <div>
+                                <img src="../img/window.png" alt="Ventanas">
+                            </div>
+                            <div>
+                                <img src="../img/mailbox.png" alt="Buzon">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="item" id="temperatura">
+                        <h2>Temperatura Interior</h2>
+                        <span>
+                            <img src="../img/temperature.png" alt="Temperatura">
+                        </span>
+                    </div>
+                    <div class="item" id="humedad">
+                        <h2>Humedad Interior</h2>
+                        <span>
+                            <img src="../img/humiditydata.png" alt="Humedad">
+                        </span>
+                    </div>
+                    <div class="item" id="calefaccion">
+                        <h2>Calefacción</h2>
+                        <span>
+                            <div>
+                                <img src="../img/fire.png" alt="Calefacción">
+                            </div>
+                            <div>
+                                <img src="../img/fire.png" alt="Calefacción">
+                            </div>
+                            <div>
+                                <img src="../img/fire.png" alt="Calefacción">
+                            </div>
+                            <div>
+                                <img src="../img/fire.png" alt="Calefacción">
+                            </div>
+                            <div>
+                                <img src="../img/fire.png" alt="Calefacción">
+                            </div>
+                            <div>
+                                <img src="../img/fire.png" alt="Calefacción">
+                            </div>
+                        </span>
+                    </div>
+                    <div class="item" id="aire">
+                        <h2>Aire Acondicionado</h2>
+                        <span>
+                            <div>
+                                <img src="../img/snow.png" alt="Aire Acondicionado">
+                            </div>
+                            <div>
+                                <img src="../img/snow.png" alt="Aire Acondicionado">
+                            </div>
+                            <div>
+                                <img src="../img/snow.png" alt="Aire Acondicionado">
+                            </div>
+                            <div>
+                                <img src="../img/snow.png" alt="Aire Acondicionado">
+                            </div>
+                            <div>
+                                <img src="../img/snow.png" alt="Aire Acondicionado">
+                            </div>
+                            <div>
+                                <img src="../img/snow.png" alt="Aire Acondicionado">
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="grafico">
+                    <h2>Consumo de Energía</h2>
+                    <canvas id="grafico-estadisticas" width="400" height="200"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 MyHomie. Todos los derechos reservados.</p>
+        <p>Desarrollado por [Grupo 14] - SIU</p>
+    </footer>
+</body>
+</html>
